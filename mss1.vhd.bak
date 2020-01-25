@@ -1,0 +1,38 @@
+LIBRARY IEEE;
+USE  IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_UNSIGNED.all;
+
+ENTITY mss1 IS
+	PORT(clock,reset,start,beta,consultar: IN STD_LOGIC;
+		  : out STD_LOGIC);
+END mss;
+
+ARCHITECTURE solucion OF mss1 IS
+Type estado is ();
+SIGNAL y:estado;
+BEGIN
+	PROCESS(clock,reset)
+	BEGIN
+		if reset='0' then y<=Ta;
+  		elsif (clock'event and clock='1') then
+			case y is
+				when Ta=> 	if start='1' then y<=Tb;
+								else y<=Ta;
+								end if;
+				when Tb=>	if start='1' then y<=Tb;
+								else y<=Tc;
+								end if;
+				when Tc=>	if beta='1' then y<=Td;
+								elsif consultar
+								
+								end PROCESS;
+PROCESS(y)
+	BEGIN
+	en_beta<= '0';ld1<='0';ensuma<='0';resdec1<='1';resdec2<='1';resdec3<='1'; en_reg<= '0';en_1<= '0';s1<= '0';s2<= '0';en_3<= '0';en_4<= '0';en_5<= '0';en_6<= '0';en_7<= '0';en_8<= '0';en_9<= '0';en_10<= '0';en_11<= '0';en<= '0';s3<= '0';reset1<= '0';reseta<= '0';en_cont<= '0';dp1<= '1';dp2<= '1';dp3<= '1';rst_con1<= '1';en_p1<= '0';en_p2<= '0';en_p3<= '0';en_con3<= '0'; led_error<= '0';en_buzzer<= '0'; buzzer_total<= '0';rst2<= '1';rst3<= '1';
+			case y is
+				when Ta=>	
+				when Tb=>	resdec1<='0';resdec2<='0';resdec3<='0';rst2<= '0';rst3<= '0';rst_con1<= '0';reset1<= '0';reseta<= '0';
+				when Tc=>	
+				end case;
+	END PROCESS;
+END solucion;
